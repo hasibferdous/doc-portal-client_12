@@ -7,7 +7,7 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
     // treatment is just another name of appointmentOptions with name, slots, _id
     const { name: treatmentName, slots } = treatment;
     const date = format(selectedDate, 'PP');
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     const handleBooking = event => {
         event.preventDefault();
@@ -48,6 +48,8 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
                     toast.error(data.message);
                 }
             })
+
+
     }
 
     return (
